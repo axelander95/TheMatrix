@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name" translatable="false">TheMatrix</string>
+    <string name="old_x">Old X</string>
+    <string name="old_y">Old Y</string>
+    <string name="new_x">New X</string>
+    <string name="new_y">New Y</string>
+    <string name="exit">Exit</string>
+    <string name="new_matrix">Create a matrix</string>
+    <string name="matrix_configuration">Matrix configuration</string>
+    <string name="rows">Rows number</string>
+    <string name="columns">Columns number</string>
+    <string name="accept">Accept</string>
+    <string name="cancel">Cancel</string>
+    <string name="rows_required">The rows number is required</string>
+    <string name="columns_required">The columns number is required</string>
+    <string name="not_zero">Both values cannot be zero</string>
+    <string name="must_configure">You must configure the matrix rows and columns</string>
+    <string name="interchange">Interchange</string>
+    <string name="colors">Define colors</string>
+    <string name="row">Row</string>
+    <string name="column">Column</string>
+    <string name="index">Select the index to be interchanged</string>
+    <string name="select_index">You must select an index</string>
+    <string name="cell">Cell</string>
+    <string name="background_color">Background color</string>
+    <string name="text_color">Text color</string>
+    <string name="background_color_required">The background color is required</string>
+    <string name="text_color_required">The text color is required</string>
+    <string name="black">Black</string>
+    <string name="blue">Blue</string>
+    <string name="gray">Gray</string>
+    <string name="green">Green</string>
+    <string name="magenta">Magenta</string>
+    <string name="red">Red</string>
+    <string name="white">White</string>
+    <string name="transparent">Transparent</string>
+    <string name="yellow">Yellow</string>
+    <string name="limit">The columns number is bigger than allowed, the max number is 10</string>
+</resources>

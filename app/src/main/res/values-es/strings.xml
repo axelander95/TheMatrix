@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accept">Aceptar</string>
+    <string name="background_color">Color de fondo</string>
+    <string name="background_color_required">El color de fondo es requerido</string>
+    <string name="black">Negro</string>
+    <string name="blue">Azul</string>
+    <string name="cancel">Cancelar</string>
+    <string name="cell">Celda</string>
+    <string name="colors">Definir colores</string>
+    <string name="column">Columna</string>
+    <string name="columns">Número de columnas</string>
+    <string name="columns_required">El número de columnas es requerido</string>
+    <string name="exit">Salir</string>
+    <string name="gray">Gris</string>
+    <string name="green">Verde</string>
+    <string name="index">Selecciona el índice de intercambio</string>
+    <string name="interchange">Intercambiar</string>
+    <string name="magenta">Magenta</string>
+    <string name="matrix_configuration">Configuración de matriz</string>
+    <string name="must_configure">Debes configurar el número de filas y columnas</string>
+    <string name="new_matrix">Crea una matriz</string>
+    <string name="new_x">Nuevo valor en X</string>
+    <string name="new_y">Nuevo valor en Y</string>
+    <string name="not_zero">Ninguno de los valores debe ser cero</string>
+    <string name="old_x">Valor anterior en X</string>
+    <string name="old_y">Valor anterior en Y</string>
+    <string name="red">Rojo</string>
+    <string name="row">Fila</string>
+    <string name="rows">Número de filas</string>
+    <string name="rows_required">El número de filas es requerido</string>
+    <string name="select_index">Debes seleccionar un índice</string>
+    <string name="text_color">Color del texto</string>
+    <string name="text_color_required">El color del texto es requerido</string>
+    <string name="transparent">Transparente</string>
+    <string name="white">Blanco</string>
+    <string name="yellow">Amarillo</string>
+    <string name="limit">El número de columnas es más grande que el permitido, el número máximo es 10</string>
+</resources>
