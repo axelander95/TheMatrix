@@ -36,4 +36,5 @@
     <string name="white">Blanco</string>
     <string name="yellow">Amarillo</string>
     <string name="limit">El número de columnas es más grande que el permitido, el número máximo es 10</string>
+    <string name="text">Tu texto</string>
 </resources>

@@ -1,13 +1,18 @@
 package com.kimerasoft_ec.thematrix;
 import android.content.Intent;
+import android.gesture.Gesture;
+import android.gesture.GestureLibraries;
+import android.gesture.GestureLibrary;
+import android.gesture.GestureOverlayView;
+import android.gesture.Prediction;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
@@ -15,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GestureOverlayView.OnGesturePerformedListener {
     private static final int MATRIX_CONFIGURATION = 1;
     private static final int INTERCHANGE = 2;
     private static final int COLOR = 3;
@@ -25,17 +30,25 @@ public class MainActivity extends AppCompatActivity {
     public static List<MatrixItem> numbers;
     private ItemAdapter adapter;
     private int currentPosition;
-    @Override
+    private EditText etYourText;
+    private GestureLibrary gestureLibrary;
+    private GestureOverlayView vMatrix;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         grvMatrix = (GridView) findViewById(R.id.grvMatrix);
+        etYourText = (EditText) findViewById(R.id.etYourText);
+        gestureLibrary = GestureLibraries.fromRawResource(getApplicationContext(), R.raw.gestures);
+        vMatrix = (GestureOverlayView) findViewById(R.id.vMatrix);
+        vMatrix.addOnGesturePerformedListener(this);
         rows = 4;
         columns = 4;
         matrix = new int[rows][columns];
         numbers = new ArrayList<>();
         generateRandomMatrix();
         currentPosition = -1;
+        if (!gestureLibrary.load())
+            finish();
     }
 
     private void generateRandomMatrix()
@@ -237,5 +250,15 @@ public class MainActivity extends AppCompatActivity {
     {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
+    }
+
+    @Override
+    public void onGesturePerformed(GestureOverlayView overlay, Gesture gesture) {
+        ArrayList<Prediction> predictions = gestureLibrary.recognize(gesture);
+
+        if (predictions != null && predictions.size() > 0 && predictions.get(0).score > 1.0) {
+            String result = predictions.get(0).name;
+            etYourText.setText(result);
+        }
     }
 }

@@ -7,15 +7,37 @@
     android:clickable="true"
     android:focusableInTouchMode="true"
     tools:context="com.kimerasoft_ec.thematrix.MainActivity">
-    <GridView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/grvMatrix"
-        android:stretchMode="columnWidth"
-        android:gravity="center"
-        android:layout_centerVertical="true"
-        android:scrollbars="horizontal|vertical"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        ></GridView>
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="@string/text"
+            android:id="@+id/etYourText"
+            />
+        <android.gesture.GestureOverlayView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:eventsInterceptionEnabled="true"
+            android:gestureStrokeType="multiple"
+            android:orientation="vertical"
+            android:id="@+id/vMatrix"
+            >
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/grvMatrix"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:scrollbars="horizontal|vertical"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                ></GridView>
+        </android.gesture.GestureOverlayView>
+    </LinearLayout>
 </RelativeLayout>
